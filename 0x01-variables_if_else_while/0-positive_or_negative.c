@@ -3,10 +3,8 @@
 #include <time.h>
 
 /**
- *Assign a random number to the variable n.
- *Print the number 
- *return 0
- *
+ * Main - print if number is positive, zero or negative
+ * Return: Always (sucess)
  */
 int main(void)
 {
@@ -16,18 +14,17 @@ int main(void)
 	n = rand() - RAND_MAX / 2;
 	
 
-         if (n>0)
+         if (n > 0)
 	 {
-         printf(" %d is positive/n",n);
+         printf("%d is positive\n",n);
 	 }
-	 else if (n==0)
+	 else if (n == 0)
 	 {
-         printf(" %d is equal to 0/n",n);
+         printf("%d is zero\n",n);
 	 }
          else
 	 {
-          printf(" %d is negative/n",n);
+          printf("%d is negative\n",n);
 	 }
-
 	return (0);
 } 

@@ -6,7 +6,7 @@
  * discription: check number which is negative or positive
  * Return: always 0
  */
-void main(void)
+int main(void)
 {
 	int n;
 
@@ -24,4 +24,7 @@ void main(void)
 	{
 		printf("%d is negative\n", n);
 	}
+	return 0;
 }
+
+

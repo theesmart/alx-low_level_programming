@@ -1,34 +1,37 @@
-#include <stdio.h>
+/*
+ * File: 1-last_digit.c
+ * Auth: Kegera
+ */
 
 #include <stdlib.h>
-
 #include <time.h>
+#include <stdio.h>
 
 /**
-* main - print a text aacording to number
-* return: always (success)
-*/
-void main(void)
-
+ * main - Prints the last digit of a randomly generated number
+ *        and whether it is greater than 5, less than 6, or 0.
+ *
+ * Return: Always 0.
+ */
+int main(void)
 {
-	int n, ld;
+        int n;
 
-	srand(time(0));
-	n = rand() - RAND_MAX / 2;
+        srand(time(0));
+        n = rand() - RAND_MAX / 2;
 
-	/*My code starts here */
-
-	ld = n % 10;
-	if (ld > 5)
-      	{
-		printf("Last digit of %d is %d and is greater than 5\n", n, ld);
-	}
- 	else if (ld == 0)
-	{
-		printf("Last digit of %d is %d and 0\n", n, ld);
-	}
-	else if (ld < 6 && ld != 0)
-	{
-		printf("Last digit of %d is %d and is less than 6 and not 0\n", n, ld);
-	}
-}
+        if ((n % 10) > 5)
+        {
+                printf("Last digit of %d is %d and is greater than 5\n",
+                        n, n % 10);
+        }
+        else if ((n % 10) < 6 && (n % 10) != 0)
+        {
+                printf("Last digit of %d is %d and is less than 6 and not 0\n",
+                        n, n % 10);
+        }
+        else
+        {
+                printf("Last digit of %d is %d and is 0\n",
+                        n, n % 10);
+        }

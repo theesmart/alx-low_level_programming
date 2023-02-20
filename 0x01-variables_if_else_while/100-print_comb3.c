@@ -4,17 +4,17 @@
  *return: return 0
  */
 
-int main (void)
+int main(void)
 {
 	int n;
 	int b;
 
 	for (n = 0; n < 9; n++)
 	{
-		for (b = n +1; b < 10; b++)
+		for (b = n + 1; b < 10; b++)
 		{
 			putchar(n % 10 + '0');
-			putchar(b %10 + '0');
+			putchar(b % 10 + '0');
 
 			if (n == 8 && b == 9)
 				continue;

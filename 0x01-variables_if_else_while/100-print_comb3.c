@@ -1,26 +1,36 @@
 #include <stdio.h>
 /**
- *main- entry point
- *return: return 0
+ * main - print numbers from 00 to 99.
+(*
+ * Return: 0 on success
  */
 int main(void)
 {
-	int n;
-	int b;
+	int i = '0';
+	int j = '0';
 
-	for (n = 0; n < 9; n++)
+	while (i <= '9')
 	{
-		for (b = n + 1; b < 10; b++)
+		while (j <= '9')
 		{
-			putchar(n % 10 + '0');
-			putchar(b % 10 + '0');
-
-			if (n == 8 && b == 9)
-				continue;
-			putchar(',');
-			putchar(' ');
+			if (!(i > j || i == j))
+			{
+				putchar(i);
+				putchar(j);
+				if (i == '8' && j == '9')
+				{
+					putchar('\n');
+				}
+				else
+				{
+					putchar(',');
+					putchar(' ');
+				}
+			}
+			j++;
 		}
+		j = '0';
+		i++;
 	}
-	putchar('\n');
 	return (0);
 }

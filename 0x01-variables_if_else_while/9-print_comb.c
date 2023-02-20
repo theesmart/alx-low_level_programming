@@ -1,37 +1,24 @@
 #include <stdio.h>
-
 /**
- * main - print all two non similar digits combination in order
- * Return: 0 (success)
+ * main - prints all possible combinations of single digit numbers.
+(*
+ * Return: 0 on success
  */
-
-int main (void)
+int main(void)
 {
-	int x = 0;
-	int y = 1;
+	int i = '0';
 
-	for (x = 0; x<= 9; x++)
+	while (i <= '9')
 	{
-		for (y = 1; y <= 9; y++)
+		putchar(i);
+		if (i != '9')
 		{
-
-			if ((x == y) || (x>y))
-			{
-			}
-			else
-			{
-				putchar(x +'0');
-				putchar(y + '0');
-				if ((x == 8) && (y == 9))
-				{
-					break;
-				}
-				putchar(',');
-				putchar(' ');
-			}
+			putchar(',');
+			putchar(' ');
 		}
-	}	
-putchar('\n');
-return (0);
-}
+		++i;
+	}
+	putchar('\n');
+	return (0);
 
+}

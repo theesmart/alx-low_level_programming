@@ -1,4 +1,4 @@
-#include "main.h"
+#include "holberton.h"
 
 /**
  * print_number -print number putchar
@@ -19,4 +19,3 @@ void print_number(int n)
 
 	_putchar(x % 10 + '0');
 }
-

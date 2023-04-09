@@ -1,22 +1,31 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
- * print_listint - Prints all the elements of a listint_t list.
- * @h: A pointer to the head of the list_t list.
+ * binary_to_uint - Converts a binary number to an unsigned int.
+ * @b: A pointer to a string of 0 and 1 chars.
  *
- * Return: The number of nodes in the list_t list.
+ * Return: If b is NULL or contains chars not 0 or 1 - 0.
+ *         Otherwise - the converted number.
  */
-size_t print_listint(const listint_t *h)
+unsigned int binary_to_uint(const char *b)
 {
-	size_t nodes = 0;
+	unsigned int num = 0, mult = 1;
+	int len;
 
-	while (h)
+	if (b == '\0')
+		return (0);
+
+	for (len = 0; b[len];)
+		len++;
+
+	for (len -= 1; len >= 0; len--)
 	{
-		nodes++;
-		printf("%d\n", h->n);
-		h = h->next;
+		if (b[len] != '0' && b[len] != '1')
+			return (0);
+
+		num += (b[len] - '0') * mult;
+		mult *= 2;
 	}
 
-	return (nodes);
+	return (num);
 }

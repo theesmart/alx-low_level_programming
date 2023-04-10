@@ -4,8 +4,6 @@
  * clear_bit - program startup
  * @n: first int being evaluated
  * @index: second
- * author: Samuelkinyua 
- *
  * Description: sets the value of a bit to 0
  * at a given index)?
  * Return: return (0) is the required function signature

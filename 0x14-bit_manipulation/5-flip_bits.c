@@ -1,8 +1,6 @@
 #include "main.h"
-
-/**
- *author: Samuel Kinyua Mutembei 
- * flip_bits - counts the number of bits to change
+/*
+ * flip_bits - counts the number of bits to which will change
  * to get from one number to another
  * @n: first number
  * @m: second number

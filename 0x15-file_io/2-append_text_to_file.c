@@ -1,8 +1,7 @@
 #include "main.h"
 
 /**
- * author: Samuel KInyua Mutembei
- * append_text_to_file - Appends text at the end of a file.
+ * append_text_to_file - Appends text at the end of each file.
  * @filename: A pointer to the name of the file.
  * @text_content: The string to add to the end of the file.
  *

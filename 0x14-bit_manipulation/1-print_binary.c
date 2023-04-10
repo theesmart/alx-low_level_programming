@@ -1,8 +1,7 @@
 #include "main.h"
 
 /**
- *Author: Samuel Kinyua Mutembei
- * print_binary - prints the binary representation of a number
+ * print_binary - prints the binary representation
  * @n: unsigned long integer to convert
  *
  * Return: void
